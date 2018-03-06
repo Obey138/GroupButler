@@ -74,7 +74,7 @@ local _M =
 			duration = 1200,
 			times_allowed = 2
 		},
-		notify_bug = false, -- notify if a bug occurs!
+		notify_bug = true, -- notify if a bug occurs!
 		log_api_errors = true, -- log errors, which happening whilst interacting with the bot api.
 		stream_commands = true,
 		admin_mode = os.getenv('GB_ADMIN_MODE') == 'true' or false
@@ -145,17 +145,17 @@ local _M =
 			['action'] = 'mute'
 		},
 		['flood'] = {
-			['MaxFlood'] = 5,
+			['MaxFlood'] = 10,
 			['ActionFlood'] = 'mute'
 		},
 		['char'] = {
-			['Arab'] = 'allowed', --'kick'/'ban'
-			['Rtl'] = 'allowed'
+			['Arab'] = 'ban', --'kick'/'ban'
+			['Rtl'] = 'kick'
 		},
 		['floodexceptions'] = {
-			['text'] = 'no',
+			['text'] = 'yes',
 			['photo'] = 'no', -- image
-			['forward'] = 'no',
+			['forward'] = 'yes',
 			['video'] = 'no',
 			['sticker'] = 'no',
 			['gif'] = 'no',
@@ -181,7 +181,7 @@ local _M =
 			['sticker'] = 'ok',
 			['gif'] = 'ok',
 			['voice'] = 'ok',
-			['contact'] = 'ok',
+			['contact'] = 'notok',
 			['document'] = 'ok', -- file
 			['link'] = 'ok',
 			['game'] = 'ok',
@@ -216,8 +216,8 @@ local _M =
 		},
 	},
 	private_settings = {
-		rules_on_join = 'off',
-		reports = 'off'
+		rules_on_join = 'on',
+		reports = 'on'
 	},
 	chat_hashes = {'extra', 'info', 'links', 'warns', 'mediawarn', 'spamwarns', 'blocked', 'report', 'defpermissions',
 		'defpermduration'},
