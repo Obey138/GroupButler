@@ -124,9 +124,9 @@ local _M =
 		-- ['nl'] = 'Nederlands 🇱🇺',
 		-- ['tr'] = 'Turkish 🇹🇷'
 		-- more languages will come
-		['pl'] = 'Polski '
+		['pl'] = 'Polski 🇵🇱'
 	},
-	allow_fuzzy_translations = false,
+	allow_fuzzy_translations = true,
 	chat_settings = {
 		['settings'] = {
 			['Welcome'] = 'off',
